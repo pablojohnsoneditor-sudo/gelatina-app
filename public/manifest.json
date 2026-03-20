@@ -1,14 +1,14 @@
 {
-  "short_name": "Gelatina",
+  "short_name": "Gelatina Mounjaro",
   "name": "Protocolo da Gelatina Mounjaro",
   "icons": [
     {
-      "src": "https://picsum.photos/seed/gelatina/192/192",
+      "src": "https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://picsum.photos/seed/gelatina/512/512",
+      "src": "https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png",
       "type": "image/png",
       "sizes": "512x512"
     }
