@@ -183,9 +183,17 @@ function Onboarding({ onComplete }: { onComplete: (data: any) => void }) {
     <div className="min-h-screen bg-white flex flex-col items-center p-8">
       <div className="w-full max-w-[480px] flex-1 flex flex-col">
         <div className="flex flex-col items-center mb-12">
-          <div className="w-20 h-20 bg-red-50 rounded-3xl flex items-center justify-center mb-6">
-            <Zap size={40} className="text-red-600" fill="currentColor" />
-          </div>
+          <img
+            src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+            alt="Gelatina Mounjaro"
+            style={{
+              width: '100px',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto 16px',
+              objectFit: 'contain'
+            }}
+          />
           <h1 className="text-2xl font-black text-center text-gray-900 leading-tight mb-2">
             Bem-vinda ao Protocolo da Gelatina Mounjaro!
           </h1>
@@ -325,8 +333,8 @@ function HomeTab({ state, updateState, showToast }: { state: any, updateState: a
 
       {isPwaBannerVisible && (
         <div className="bg-green-600 rounded-2xl p-4 text-white relative flex items-center gap-4">
-          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-            <Zap size={24} />
+          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
+            📱
           </div>
           <div className="flex-1">
             <h3 className="font-black">Instalar App</h3>
@@ -405,13 +413,42 @@ function HomeTab({ state, updateState, showToast }: { state: any, updateState: a
 
       <div id="preparo-section" className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
         <div className="flex flex-col items-center text-center gap-4">
-          <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-red-600">
-            <Zap size={32} fill="currentColor" />
-          </div>
+          <img
+            src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+            alt="Gelatina Mounjaro"
+            style={{
+              width: '48px',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'inline-block',
+              verticalAlign: 'middle',
+              marginRight: '8px'
+            }}
+          />
           <div>
             <h3 className="text-lg font-black text-gray-900">Ativar o Protocolo da Gelatina: Sua Receita está Pronta!</h3>
-            <div className="inline-block bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-black mt-2">
-              🔴 Dia {diasNoProtocolo} de 30 🔴
+            <div className="inline-flex items-center gap-1.5 bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-black mt-2">
+              <img
+                src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+                alt="Gelatina Mounjaro"
+                style={{
+                  width: '16px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  marginRight: '4px'
+                }}
+              />
+              Dia {diasNoProtocolo} de 30
+              <img
+                src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+                alt="Gelatina Mounjaro"
+                style={{
+                  width: '16px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  marginLeft: '4px'
+                }}
+              />
             </div>
           </div>
 
@@ -438,7 +475,15 @@ function HomeTab({ state, updateState, showToast }: { state: any, updateState: a
             {prepView === 'options' && (
               <div className="flex flex-col items-center gap-6">
                 <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-red-600">
-                  <Zap size={32} />
+                  <img
+                    src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+                    alt="Gelatina Mounjaro"
+                    style={{
+                      width: '48px',
+                      height: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
                 </div>
                 <div className="text-center">
                   <h4 className="text-xl font-black">Vamos Preparar?</h4>
@@ -497,10 +542,31 @@ function HomeTab({ state, updateState, showToast }: { state: any, updateState: a
         </div>
       </Modal>
 
-      <Modal isOpen={isReminderModalOpen} onClose={() => setIsReminderModalOpen(false)} title="Hora do Truque! 🔴">
+      <Modal isOpen={isReminderModalOpen} onClose={() => setIsReminderModalOpen(false)} title={
+        <div className="flex items-center gap-2">
+          Hora do Truque!
+          <img
+            src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+            alt="Gelatina Mounjaro"
+            style={{
+              width: '24px',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </div>
+      }>
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="w-20 h-20 bg-red-600 rounded-3xl flex items-center justify-center text-white shadow-lg shadow-red-600/20">
-            <Zap size={40} fill="currentColor" />
+            <img
+              src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+              alt="Gelatina Mounjaro"
+              style={{
+                width: '48px',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
           <div>
             <h4 className="text-xl font-black text-gray-900">Não esqueça de hoje!</h4>
@@ -711,7 +777,21 @@ function StepsView({ onComplete, onClose }: { onComplete: () => void, onClose: (
           <CheckCircle2 size={64} />
         </div>
         <div>
-          <h4 className="text-2xl font-black text-gray-900">Protocolo Concluído!</h4>
+          <h4 className="text-2xl font-black text-gray-900">
+            <img
+              src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+              alt="Gelatina Mounjaro"
+              style={{
+                width: '48px',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'inline-block',
+                verticalAlign: 'middle',
+                marginRight: '8px'
+              }}
+            />
+            Protocolo Concluído!
+          </h4>
           <p className="text-gray-500">Seu metabolismo agradece. ✨</p>
         </div>
         <button
@@ -819,10 +899,10 @@ function AulasTab({ showToast }: { showToast: any }) {
 
   const aulas = {
     1: [
-      { id: "aula1_1", title: "O Protocolo da Gelatina Metabólica", duration: "12:45", desc: "Você dará o primeiro passo para dominar o Truque da Gelatina e entender como foi gerado seu protocolo e receita personalizada.", videoId: "dQw4w9WgXcQ" }
+      { id: "aula1_1", title: "O Protocolo da Gelatina Metabólica", duration: "12:45", desc: "Você dará o primeiro passo para dominar o Truque da Gelatina e entender como foi gerado seu protocolo e receita personalizada.", videoId: "hMP9cJyE7FA" }
     ],
     2: [
-      { id: "aula2_1", title: "Protocolo Antiflacidez", duration: "15:00", desc: "Esta aula é um guia prático e direto focado na recuperação da tonicidade da pele corporal, fugindo de promessas milagrosas.", videoId: "dQw4w9WgXcQ" }
+      { id: "aula2_1", title: "Protocolo Antiflacidez", duration: "15:00", desc: "Esta aula é um guia prático e direto focado na recuperação da tonicidade da pele corporal, fugindo de promessas milagrosas.", videoId: "SXDrCi3udR0" }
     ]
   };
 
@@ -892,7 +972,23 @@ function AulasTab({ showToast }: { showToast: any }) {
                 onClick={() => setSelectedModule(m.id)}
                 className={`p-4 rounded-3xl flex flex-col items-start text-left transition-all border-2 ${selectedModule === m.id ? `border-transparent ${m.color} text-white shadow-lg` : 'border-gray-100 bg-white text-gray-900'}`}
               >
-                <span className="text-xs font-black mb-1">{m.id === 1 ? '🔴' : '📚'} {m.title}</span>
+                <span className="text-xs font-black mb-1 flex items-center">
+                  {m.id === 1 ? (
+                    <img
+                      src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+                      alt="Gelatina Mounjaro"
+                      style={{
+                        width: '48px',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        display: 'inline-block',
+                        verticalAlign: 'middle',
+                        marginRight: '8px'
+                      }}
+                    />
+                  ) : '📚'} 
+                  {m.title}
+                </span>
                 <span className={`text-[10px] mb-3 ${selectedModule === m.id ? 'opacity-80' : 'text-gray-400'}`}>{m.sub}</span>
                 <span className={`text-[10px] font-black px-2 py-1 rounded-full ${selectedModule === m.id ? 'bg-white/20' : 'bg-gray-100 text-gray-500'}`}>{m.badge}</span>
               </button>
@@ -955,7 +1051,21 @@ function TruqueTab({ state }: { state: any }) {
   return (
     <div className="flex flex-col gap-6">
       <header className="flex justify-between items-center">
-        <h1 className="text-2xl font-black text-gray-900">🔴 Truque da Gelatina</h1>
+        <h1 className="text-2xl font-black text-gray-900">
+          <img
+            src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+            alt="Gelatina Mounjaro"
+            style={{
+              width: '48px',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'inline-block',
+              verticalAlign: 'middle',
+              marginRight: '8px'
+            }}
+          />
+          Truque da Gelatina
+        </h1>
         <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-black transition-colors ${state.truque_hoje ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
           {state.truque_hoje ? (
             <><CheckCircle2 size={14} /> RITUAL CONCLUÍDO</>
@@ -987,7 +1097,15 @@ function TruqueTab({ state }: { state: any }) {
 
         <div className="bg-red-600 rounded-3xl p-6 text-white shadow-lg shadow-red-600/20 flex flex-col justify-between aspect-square">
           <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-            <Zap size={20} fill="currentColor" />
+            <img
+              src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+              alt="Gelatina Mounjaro"
+              style={{
+                width: '24px',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
           <div>
             <span className="text-4xl font-black leading-none">{state.sequencia}</span>
@@ -1054,7 +1172,15 @@ function TruqueTab({ state }: { state: any }) {
         
         <div className="bg-red-50 rounded-2xl p-4 flex items-center gap-3">
           <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-red-600 shrink-0">
-            <Zap size={16} fill="currentColor" />
+            <img
+              src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+              alt="Gelatina Mounjaro"
+              style={{
+                width: '24px',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
           <div className="flex flex-col">
             <p className="text-[10px] text-red-900 font-black">
@@ -1265,7 +1391,16 @@ function PerfilTab({ state, resetState, updateState, showToast }: { state: any, 
 
       <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm flex flex-col gap-6">
         <h3 className="text-sm font-black text-gray-400 uppercase tracking-wider flex items-center gap-2">
-          <Zap size={16} /> Seu Resumo
+          <img
+            src="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png"
+            alt="Gelatina Mounjaro"
+            style={{
+              width: '16px',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+          Seu Resumo
         </h3>
 
         <div className="grid grid-cols-2 gap-8">
@@ -1363,9 +1498,7 @@ function PerfilTab({ state, resetState, updateState, showToast }: { state: any, 
           )}
         </div>
 
-        <ProfileItem icon={<Zap size={20} />} title="Protocolo da Gelatina Mounjaro" sub="Versão 1.0.0" />
         <ProfileItem icon={<PlayCircle size={20} />} title="Instalar App" sub="Instale na sua tela inicial para acesso rápido" />
-        <ProfileItem icon={<Info size={20} />} title="Sobre o protocolo" sub="Método baseado em ciência para perda de peso saudável" />
       </div>
 
       <button

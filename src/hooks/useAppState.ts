@@ -46,7 +46,7 @@ const INITIAL_STATE: AppState = {
 
 export function useAppState() {
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('protocolo_gelatina_state');
+    const saved = localStorage.getItem('protocolo_gelatina_mounjaro_v1');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -92,7 +92,7 @@ export function useAppState() {
   });
 
   useEffect(() => {
-    localStorage.setItem('protocolo_gelatina_state', JSON.stringify(state));
+    localStorage.setItem('protocolo_gelatina_mounjaro_v1', JSON.stringify(state));
   }, [state]);
 
   const updateState = (updates: Partial<AppState>) => {
@@ -101,7 +101,7 @@ export function useAppState() {
 
   const resetState = () => {
     setState(INITIAL_STATE);
-    localStorage.removeItem('protocolo_gelatina_state');
+    localStorage.removeItem('protocolo_gelatina_mounjaro_v1');
   };
 
   return { state, updateState, resetState };
