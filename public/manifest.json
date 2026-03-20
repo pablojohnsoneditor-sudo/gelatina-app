@@ -1,0 +1,20 @@
+{
+  "short_name": "Gelatina",
+  "name": "Protocolo da Gelatina Mounjaro",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/gelatina/192/192",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://picsum.photos/seed/gelatina/512/512",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#E53935",
+  "background_color": "#FAFAFA"
+}
