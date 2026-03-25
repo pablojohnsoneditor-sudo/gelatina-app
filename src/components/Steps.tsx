@@ -1345,7 +1345,7 @@ export const SalesPage: React.FC<StepProps> = ({ step, state }) => {
 
   const handleCompra = () => {
     if ((window as any).clarity) (window as any).clarity("event", "compra_clicada");
-    window.open('https://checkout.payt.com.br/9d5868b5cd899ff9dfe300d97f116963', '_blank');
+    window.open('https://checkout.payt.com.br/f1615299364060ff3fce5eb0b0ba10ad', '_blank');
   };
 
   React.useEffect(() => {

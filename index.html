@@ -1,32 +1,42 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protocolo da Gelatina Mounjaro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Gelatina Mounjaro">
-    <link rel="apple-touch-icon" href="https://xsomezyqnzetfxulmvlp.supabase.co/storage/v1/object/public/Fotos%20GM/GM.png">
-    <meta name="theme-color" content="#E53935">
-    <link rel="manifest" href="/manifest.json">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        background-color: #FAFAFA;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
-      }
-      /* Safe area for iOS */
-      .safe-area-bottom {
-        padding-bottom: env(safe-area-inset-bottom);
-      }
-    </style>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Gelatina Mounjaro</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=latin" rel="stylesheet">
+
+  <!-- Preload: imagens da primeira tela (máxima prioridade) -->
+  <link rel="preload" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/GM.webp" fetchpriority="high" />
+
+  <!-- Prefetch: imagens secundárias (carregam em segundo plano na ordem do fluxo) -->
+  <!-- Step 3: Classificação do Corpo -->
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/Medio.webp" />
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/Plus.webp" />
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/Acima.webp" />
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/Sobrepeso.webp" />
+  
+  <!-- Step 4: Áreas para Perder Gordura -->
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/CORPO%20TODO.webp" />
+  
+  <!-- Step 5: Prova Social - Mídia -->
+  <link rel="prefetch" as="image" href="https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/NOT.webp" />
+
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vyx9p4y84m");
+  </script>
+
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
