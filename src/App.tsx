@@ -111,7 +111,7 @@ function MainApp({ state, updateState, resetState, activeTab, setActiveTab, toas
           if (Notification.permission === 'granted') {
             new Notification('Protocolo da Gelatina', {
               body: 'Olá! Não se esqueça do seu truque da gelatina hoje! 🔴',
-              icon: 'https://picsum.photos/seed/gelatina/192/192'
+              icon: 'https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/GM.webp'
             });
             localStorage.setItem('last_notified_date', today);
           } else if (Notification.permission !== 'denied') {
@@ -516,7 +516,7 @@ function HomeTab({ state, updateState, showToast }: { state: any, updateState: a
               <StepsView onComplete={() => {
                 updateState({ 
                   truque_hoje: true,
-                  sequencia: state.sequencia + 1
+                  sequencia: state.truque_hoje ? state.sequencia : state.sequencia + 1
                 });
                 setShowPrep(false);
                 setPrepView('options');
@@ -947,7 +947,7 @@ function AulasTab({ showToast }: { showToast: any }) {
             transition={{ delay: 0.1 }}
             className="flex flex-col gap-2"
           >
-            <div className="inline-flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-[10px] font-black w-fit">Aula 1 • {viewingVideo.duration}</div>
+            <div className="inline-flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-[10px] font-black w-fit">{`Aula ${aulas[selectedModule as keyof typeof aulas].findIndex(a => a.id === viewingVideo.id) + 1}`} • {viewingVideo.duration}</div>
             <h3 className="text-xl font-black text-gray-900">{viewingVideo.title}</h3>
             <p className="text-sm text-gray-500 leading-relaxed">{viewingVideo.desc}</p>
           </motion.div>
@@ -1003,7 +1003,7 @@ function AulasTab({ showToast }: { showToast: any }) {
           </div>
 
           <div className="flex flex-col gap-4">
-            {aulas[selectedModule as keyof typeof aulas].map(aula => (
+            {aulas[selectedModule as keyof typeof aulas].map((aula, index) => (
               <div key={aula.id} className="bg-white rounded-3xl p-4 border border-gray-100 shadow-sm flex flex-col gap-4">
                 <motion.div 
                   layoutId={`video-container-${aula.id}`}
@@ -1016,7 +1016,7 @@ function AulasTab({ showToast }: { showToast: any }) {
                   <div className="absolute bottom-3 right-3 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-lg font-black">⏱️ {aula.duration}</div>
                 </motion.div>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-black text-gray-400 uppercase">Aula 1</span>
+                  <span className="text-[10px] font-black text-gray-400 uppercase">{`Aula ${index + 1}`}</span>
                   <h4 className="font-black text-gray-900">{aula.title}</h4>
                   <p className="text-xs text-gray-500 line-clamp-2">{aula.desc}</p>
                 </div>
@@ -1031,7 +1031,7 @@ function AulasTab({ showToast }: { showToast: any }) {
           </div>
 
           <button
-            onClick={() => window.open('https://google.com', '_blank')}
+            onClick={() => window.open('#', '_blank', 'noopener,noreferrer')} {/* TODO: substituir pela URL real dos bônus */}
             className="w-full bg-red-600 text-white py-5 rounded-2xl font-black flex items-center justify-center gap-2 shadow-xl shadow-red-600/10 active:scale-95 transition-all"
           >
             🎁 Acessar meus bônus
@@ -1118,7 +1118,7 @@ function TruqueTab({ state }: { state: any }) {
             <Target size={20} />
           </div>
           <div>
-            <span className="text-2xl font-black text-gray-900 leading-none">{30 - diasNoProtocolo}</span>
+            <span className="text-2xl font-black text-gray-900 leading-none">{Math.max(0, 30 - diasNoProtocolo)}</span>
             <p className="text-[10px] font-black text-gray-400 uppercase mt-1">Dias Restantes</p>
           </div>
         </div>
@@ -1484,7 +1484,7 @@ function PerfilTab({ state, resetState, updateState, showToast }: { state: any, 
                 if (Notification.permission === 'granted') {
                   new Notification('Protocolo da Gelatina', {
                     body: 'Este é um teste do seu lembrete diário! 🔴',
-                    icon: 'https://picsum.photos/seed/gelatina-red/192/192'
+                    icon: 'https://gkaoozgpeeeympskbcxq.supabase.co/storage/v1/object/public/IMGs/GM.webp'
                   });
                   showToast('Notificação de teste enviada! 🔔');
                 } else {
